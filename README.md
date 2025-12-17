@@ -1,66 +1,36 @@
-# 🌿 Plant Health AI: Multi-Model Disease Classification
+# 🌿 Plant Disease Detection: Classical ML vs. Deep Learning
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10%2B-orange?logo=tensorflow)](https://www.tensorflow.org)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.0%2B-orange?logo=scikit-learn)](https://scikit-learn.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## 📌 Overview
-Crop diseases are a major threat to food security. This project develops an automated diagnosis system using the **PlantVillage dataset**. We conduct a rigorous comparison between **Deep Learning (CNN)** and **Traditional Machine Learning (SVM, Random Forest)** to identify the most robust architecture for detecting 38 different plant disease categories.
-
-
+## **Project Title & Team Members**
+**Title**: CIFAR-Based Plant Disease Classification: Classical Machine Learning vs. Deep Learning (CNN)  
+**Team Members**:
+- **Muhammad Mutaal Khan** (CMS ID: 522455) – Deep learning implementation, CNN architecture, overall pipeline.
+- **Saif Ullah Farooqi** (CMS ID: 511676) – Classical ML (SVM, RF), evaluation, and visualization.
 
 ---
 
-## 📊 Dataset Highlights
-- **Scope**: 54,304 high-resolution RGB images.
-- **Diversity**: 14 crop species (Tomato, Potato, Grape, Apple, etc.).
-- **Categories**: 38 classes (Diseased vs. Healthy).
-- **Preprocessing**: 
-  - Images resized to $128 \times 128$.
-  - Pixel values normalized to $[0, 1]$.
-  - One-hot encoding for 38 target labels.
+## **Abstract**
+This project investigates the performance of **classical machine learning** (SVM, Random Forest) compared to a custom **Convolutional Neural Network (CNN)** architecture for the task of plant leaf disease identification. Using the **PlantVillage dataset** (54,304 images), we evaluated models on their ability to classify 38 distinct health categories. Results demonstrate that while SVM provides a strong classical baseline, the CNN model achieves a state-of-the-art accuracy of **98.88%**, proving the necessity of spatial feature learning for high-complexity agricultural vision tasks.
 
 ---
 
-## 🧠 Model Architectures
-
-### 1. Convolutional Neural Network (CNN) - *The Top Performer*
-Designed to learn spatial hierarchies automatically.
-- **Convolution Layers**: For automated feature extraction (edges, textures, spots).
-- **Max Pooling**: To reduce spatial dimensions and focus on prominent features.
-- **Dropout**: Implemented at $0.5$ rate to ensure the model generalizes to new fields.
-
-
-
-### 2. Support Vector Machine (SVM)
-- **Kernel**: Radial Basis Function (RBF).
-- **Approach**: High-dimensional hyperplane separation.
-
-### 3. Random Forest (RF)
-- **Configuration**: 200 Estimators (Decision Trees).
-- **Approach**: Ensemble voting based on flattened pixel intensities.
+## **Introduction**
+Early and accurate identification of plant diseases is a cornerstone of modern precision agriculture. This project aims to:
+1.  Implement **Support Vector Machine (SVM)** and **Random Forest (RF)** using flattened pixel data.
+2.  Develop a high-performance **CNN** using TensorFlow/Keras to capture spatial hierarchies.
+3.  Establish a **fair comparative framework** to analyze the trade-off between model complexity and diagnostic accuracy.
+4.  Analyze the **business impact** of deploying these models in real-world farming environments.
 
 ---
 
-## 🏆 Performance Comparison
-The results demonstrate a clear advantage for spatial-aware models (CNN) over pixel-independent models (SVM/RF).
+## **Dataset Description**
+- **Source**: [PlantVillage Dataset](https://www.kaggle.com/datasets)
+- **Size**: 54,304 RGB images.
+- **Image Dimensions**: $128 \times 128 \times 3$ (RGB).
+- **Classes**: 38 categories (e.g., Apple Scab, Tomato Early Blight, Healthy Corn, etc.).
 
-| Metric | Random Forest | SVM | **CNN (Ours)** |
-| :--- | :---: | :---: | :---: |
-| **Accuracy** | 67.33% | 85.40% | **98.88%** |
-| **Macro F1-Score** | 0.55 | 0.81 | **0.98** |
-| **Weighted F1-Score** | 0.64 | 0.85 | **0.99** |
+[Image of a collage of various plant leaves showing different types of diseases like leaf spot, rust, and blight, labeled with their respective categories]
 
-
-
-### **Key Discovery**
-The CNN model achieved near-perfect accuracy because it analyzes the **spatial relationship** between pixels (detecting the shape of a lesion), whereas SVM/RF treat pixels as a flat list, losing critical "shape" information.
-
----
-
-## 🚀 Quick Start
-
-### 1. Prerequisites
-```bash
-pip install tensorflow opencv-python matplotlib scikit-learn pandas
+### **Splits & Preprocessing**
+- **Training/Test Split**: 80/20 ratio.
+- **Normalization**: Rescaled pixel intensities to the $[0, 1]$ range.
+- **Reshaping**: Images were flattened for SVM/RF and kept
