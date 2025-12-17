@@ -1,10 +1,8 @@
 # 🌿 Plant Disease Detection: Classical ML vs. Deep Learning
 
-## **Project Title & Team Members**
+## **Project Title**
 **Title**: CIFAR-Based Plant Disease Classification: Classical Machine Learning vs. Deep Learning (CNN)  
-**Team Members**:
-- **Muhammad Mutaal Khan** (CMS ID: 522455) – Deep learning implementation, CNN architecture, overall pipeline.
-- **Saif Ullah Farooqi** (CMS ID: 511676) – Classical ML (SVM, RF), evaluation, and visualization.
+Made By: M.Ahmad Saeed
 
 ---
 
