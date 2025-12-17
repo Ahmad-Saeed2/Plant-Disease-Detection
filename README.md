@@ -38,7 +38,7 @@ Designed to learn spatial hierarchies automatically.
 - **Approach**: High-dimensional hyperplane separation.
 
 ### 3. Random Forest (RF)
-- **Configuration**: 100 Estimators (Decision Trees).
+- **Configuration**: 200 Estimators (Decision Trees).
 - **Approach**: Ensemble voting based on flattened pixel intensities.
 
 ---
