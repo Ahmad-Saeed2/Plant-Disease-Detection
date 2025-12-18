@@ -120,7 +120,7 @@ This system can be used in various agricultural settings, including:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE]([LICENSE](https://github.com/Ahmad-Saeed2/Plant-Disease-Detection/blob/main/LICENSE.txt)) file for details.
 
 ---
 
