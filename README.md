@@ -117,6 +117,12 @@ This system can be used in various agricultural settings, including:
 - **Farm Automation**: Integrating this model with drones and automated systems for continuous crop health monitoring in large farms.
 
 ---
+## Pre Trained Models
+Download Pre Trained Models from here:
+
+-[Support Vector Machine](https://drive.google.com/file/d/1Au2wrdcjtlZKP4nGSomNFHFWsbU3hgxY/view?usp=drive_link)
+-[Random Forest](https://drive.google.com/file/d/1yybox04oee_vsDVMLh3c4gN-sqQAdO5U/view?usp=drive_link)
+-[CNN](https://drive.google.com/file/d/1e1Fkzb1sFRVKZj0BP1cISTuKF3vAf9cG/view?usp=drive_link)
 
 ## License
 
